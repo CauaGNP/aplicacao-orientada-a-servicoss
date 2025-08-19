@@ -6,4 +6,4 @@ const port = 3000
 
 app.listen(port, () => console.log("Server is running!!"));
 
-app.get("/", (req, res) => { res.send("Hello World")})
+app.get("/", (req, res) => { res.send("Bem-vindo ao Express de CauãGNP")})
