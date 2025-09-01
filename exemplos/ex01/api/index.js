@@ -39,7 +39,7 @@ app.get("/inspiration", (req,res) => {
     ];
 
     res.send({
-        quote: quotesInspirations[randomNumber],
+        quote: quotesInspirations[randomNumber]
     })
 }); 
 
