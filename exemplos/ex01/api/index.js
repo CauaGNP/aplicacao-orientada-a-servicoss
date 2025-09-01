@@ -1,13 +1,10 @@
 import "dotenv/config"
 import express from "express";
-import cors from "cors";
-import basicMidleware from "./midlewares/basicMidleWare";
-
 const app = express();
 const port = 3000
 
-app.use(cors());
-app.use(basicMidleware);
+app.use(require("cors")());
+app.use()
 
 app.listen(port,() => console.log("Server is running!!"));
 
@@ -17,7 +14,7 @@ app.get("/random", (req,res)=>{
     const randomNumber = Math.floor(Math.random() * (100 - 1) + 1);
 
     res.send({
-        number: randomNumber
+            number: randomNumber
     })
 })
 
@@ -45,5 +42,6 @@ app.get("/inspiration", (req,res) => {
     res.send({
         quote: quotesInspirations[randomNumber],
     })
-});
+}); 
 
+                                                                                                            
