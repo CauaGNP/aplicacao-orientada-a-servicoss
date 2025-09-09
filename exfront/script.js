@@ -1,15 +1,11 @@
+const resetButton = document.querySelector("#resetQuoteButton");
 
 async function getAPI() {
     try {
-        const url = 'https://fictional-space-telegram-7v75px7xq5gvcr6wx-3000.app.github.dev';
-        const response = await axios.get(`https://fictional-space-telegram-7v75px7xq5gvcr6wx-3000.app.github.dev/inspiration`)
-        
-        if (!response.ok) {
-            throw new Error(`Erro: ${response.status} ${response.statusText}`);
-        }
-        
-        const data = await response.data;
-        console.log(data);
+        const url = 'https://aplicacao-orientada-a-servicos-ex01.vercel.app';
+        const response = await axios.get(`${url}/inspiration`)
+                console.log(response);
+        const data = response.data;
         return data;
     } catch (error) {
         console.log('Erro ao buscar a API:', error);
@@ -22,5 +18,9 @@ async function displayQuotes() {
     
     paragraph.textContent = data.quote;
 }
+
+resetButton.addEventListener("click", ()=>{
+    displayQuotes();
+})
 
 window.onload = displayQuotes;

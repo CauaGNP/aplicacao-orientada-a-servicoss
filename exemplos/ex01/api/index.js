@@ -1,11 +1,15 @@
 import "dotenv/config"
 import express from "express";
+import cors from "cors";
+import basicMiddleware from "./midlewares/basicMidleWare";
 const app = express();
 const port = 3000
 
-app.use(require("cors")());
-
 app.listen(port,() => console.log("Server is running!!"));
+app.use(basicMiddleware);
+app.use(cors({
+    origin : ["*", "http://localhost:3000"],
+}));
 
 app.get("/", (req, res) => { res.send("Bem-vindo ao Express de CauãGNP")});
 

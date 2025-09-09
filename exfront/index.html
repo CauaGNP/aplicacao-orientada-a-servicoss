@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste API</title>
+    <style>
+        #resetQuoteButton{
+            background-color: rgb(170, 170, 170);
+            border-radius: 8px;
+
+            padding: 6px 8px;
+        }
+
+        #resetQuoteButton:hover{
+            background-color: rgb(78, 78, 78);
+            color: white;
+
+            transition: all .3s;
+        }
+    </style>
 </head>
 <body>
-    <h1>Teste API- frase motivacional</h1>
+    <h1>API test - Motivacional Quote</h1>
     <p id="paragraph"></p>
+    <button id="resetQuoteButton">Reset Quote</button>
 
     <script src="script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js"></script>
