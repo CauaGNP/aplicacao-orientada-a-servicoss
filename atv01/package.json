@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx tsx watch api/index.ts",
+    "start": "node -r tsconfig-paths/register dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -25,6 +25,7 @@
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.2",
     "uuid": "^13.0.0"
   }
