@@ -5,12 +5,12 @@ import routes from "./routes/index.js";
 const server = express();
 const port = process.env.PORT ?? 3000;
 
+server.listen(port, () => {
+  console.log("Server is runing!!");
+});
+
 server.get("/", (req, res) => {
   res.send("Welcome a task API!!");
 });
 
 server.use("/task", routes.taskRoutes);
-
-server.listen(port, () => {
-  console.log("Server is runing!!");
-});

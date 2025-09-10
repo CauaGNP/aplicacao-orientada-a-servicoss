@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "bun run api/index.ts",
+    "start": "npx tsx watch api/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -29,12 +28,5 @@
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.2",
     "uuid": "^13.0.0"
-  },
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
   }
 }
