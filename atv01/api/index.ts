@@ -14,3 +14,5 @@ server.get("/", (req, res) => {
 });
 
 server.use("/task", routes.taskRoutes);
+
+export default server;
