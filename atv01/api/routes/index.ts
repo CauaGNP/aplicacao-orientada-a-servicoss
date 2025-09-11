@@ -1,4 +1,4 @@
-import taskRoutes from "./taskRoutes.ts";
+import taskRoutes from "./taskRoutes";
 
 export default {
   taskRoutes,
