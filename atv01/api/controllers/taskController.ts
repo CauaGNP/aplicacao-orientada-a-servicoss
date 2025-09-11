@@ -3,13 +3,13 @@ import { taskType } from "@/types/taskTypes.ts";
 import { Request, Response } from "express";
 import { v4 as uuidV4 } from "uuid";
 
-const getAllTasks = ({ req, res }: { req: Request; res: Response }) => {
+const getAllTasks = (req: Request, res: Response) => {
   res.send({
     data: tasks,
   });
 };
 
-const getTaskById = ({ req, res }: { req: Request; res: Response }) => {
+const getTaskById = (req: Request, res: Response) => {
   const { taskId } = req.params;
 
   const task = tasks.find((e) => e.id === taskId);
@@ -23,7 +23,7 @@ const getTaskById = ({ req, res }: { req: Request; res: Response }) => {
   });
 };
 
-const createTask = ({ req, res }: { req: Request; res: Response }) => {
+const createTask = (req: Request, res: Response) => {
   const newTask: taskType = {
     id: uuidV4(),
     description: req.body.description,
@@ -31,13 +31,13 @@ const createTask = ({ req, res }: { req: Request; res: Response }) => {
   };
 
   tasks.push(newTask);
-  res.send({
+  res.status(201).send({
     message: "Created task",
     data: newTask,
   });
 };
 
-const updatedTask = ({ req, res }: { req: Request; res: Response }) => {
+const updatedTask = (req: Request, res: Response) => {
   const { taskId } = req.params;
 
   if (!taskId) {
@@ -68,7 +68,7 @@ const updatedTask = ({ req, res }: { req: Request; res: Response }) => {
   });
 };
 
-const deleteTask = ({ req, res }: { req: Request; res: Response }) => {
+const deleteTask = (req: Request, res: Response) => {
   const { taskId } = req.params;
 
   const taskIndex = tasks.findIndex((e) => e.id === taskId);
