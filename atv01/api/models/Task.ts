@@ -1,4 +1,4 @@
-import { taskType } from "@/types/taskTypes";
+import { taskType } from "@/types/taskTypes.js";
 
 var tasks: Array<taskType> = [];
 

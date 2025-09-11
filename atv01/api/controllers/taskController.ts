@@ -1,5 +1,5 @@
-import tasks from "@/models/Task";
-import { taskType } from "@/types/taskTypes";
+import tasks from "@/models/Task.js";
+import { taskType } from "@/types/taskTypes.js";
 import { Request, Response } from "express";
 import { v4 as uuidV4 } from "uuid";
 

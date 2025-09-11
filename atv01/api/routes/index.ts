@@ -1,4 +1,4 @@
-import taskRoutes from "./taskRoutes";
+import taskRoutes from "./taskRoutes.js";
 
 export default {
   taskRoutes,
